@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';  // 🛑 Bas Routes aur Route import karo
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
@@ -22,7 +22,7 @@ import MessagesList from "./components/admin/MessagesList";
 
 const App = () => {
   return (
-    <Router>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,24 +30,25 @@ const App = () => {
         <Route path="/category/computer-laptop" element={<Computers />} />
         <Route path="/category/earbuds" element={<Earbuds />} />
         <Route path="/phones/:productId" element={<ProductDetail />} />
-        <Route path="/compare" element={<CompareList />} />  {/* 🔥 This is the right one now */}
+        <Route path="/compare" element={<CompareList />} />
         <Route path="/compare/:slug" element={<CompareDetails />} />
         <Route path="/news/:newsId" element={<NewsDetail />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<AboutUs />} />
-         {/* Admin Dashboard */}
-         <Route path="/admin" element={<Dashboard />}>
+
+        {/* Admin Dashboard Routes */}
+        <Route path="/admin" element={<Dashboard />}>
           <Route path="products" element={<ProductsList />} />
           <Route path="blogs" element={<BlogsList />} />
           <Route path="news" element={<NewsList />} />
-          <Route path="messages" element={<MessagesList />} />  </Route>
+          <Route path="messages" element={<MessagesList />} />
+        </Route>
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 };
 
 export default App;
-
