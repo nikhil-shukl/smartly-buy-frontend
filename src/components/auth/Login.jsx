@@ -9,14 +9,16 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
-       console.log("Email -->", email);
-       console.log("Password -->", password);
+    console.log("Email -->", email);
+    console.log("Password -->", password);
 
     e.preventDefault();
     setLoading(true);
+    const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'; // Using the environment variable for API URL
+
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${baseURL}/auth/login`, // Dynamic API URL
         { email, password },
         { withCredentials: true }
       );
@@ -76,3 +78,4 @@ const Login = () => {
 };
 
 export default Login;
+
