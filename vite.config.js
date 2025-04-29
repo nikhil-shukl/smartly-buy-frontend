@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // ✅ correct for Vercel
+  base: '/smartly-buy-frontend/', // ← this must match the repo/project name on Vercel
 })
