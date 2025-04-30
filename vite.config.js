@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // ✅ MATCH karo repo/project name se
+  base: './', // ✅ MATCH karo repo/project name se
 });
