@@ -1,7 +1,7 @@
 import React from 'react';
 import TrendingNews from './TrendingNews';
 import { Link } from 'react-router-dom';
-import CompareList from '../blog/compare/CompareList';
+import HeroicSection from './HeroicSection';
 
 const categoryData = [
   {
@@ -31,28 +31,8 @@ const Home = () => {
     <div className="container mx-auto p-4 space-y-8">
 
       {/* Hero Section */}
-      <div className="relative flex flex-col md:flex-row items-center gap-8 bg-gray-100 p-6 rounded-lg shadow-md">
-        <div className="flex-1">
-          <h1 className="text-4xl font-bold mb-4">Discover the Latest iPhone 14</h1>
-          <p className="text-lg mb-4">
-            Explore the best features, specifications, and offers on the latest Apple iPhone 14. The ultimate smartphone experience awaits!
-          </p>
-          <Link 
-            to="/products/iphone-14" 
-            className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200"
-          >
-            View Product
-          </Link>
-        </div>
-        <div className="flex-1">
-          <img 
-            src="https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg" 
-            alt="iPhone" 
-            className="w-full rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-
+      <HeroicSection />
+     
 
 
       <div className="my-8">  {/* Adjust margin to create the desired gap */}
@@ -111,7 +91,7 @@ const Home = () => {
       {/* Blog Comparison Section */}
       <div className="mt-12">
         <h2 className="text-3xl font-bold mb-6">Latest Comparisons</h2>
-        <CompareList />
+        
       </div>
 
        
