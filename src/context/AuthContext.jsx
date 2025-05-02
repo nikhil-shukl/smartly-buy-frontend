@@ -12,7 +12,8 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get('/api/auth/me');
+        // Use axios instance with correct base URL
+        const response = await axios.get('/auth/me');  // Adjust endpoint if needed
         setUser(response.data); // Adjust the response data as needed
       } catch (err) {
         setUser(null);

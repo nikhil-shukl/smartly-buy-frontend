@@ -6,11 +6,15 @@ const Signup = () => {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
   const [error, setError] = useState(null);  // State for holding error message
   const navigate = useNavigate();
+  const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'; // Default to local if not in production
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/auth/register", form);
+      const { data } = await axios.post(
+        `${baseURL}/auth/register`, // Use dynamic API URL
+        form
+      );
       localStorage.setItem("user", JSON.stringify(data));
       navigate("/");
     } catch (err) {
@@ -19,6 +23,7 @@ const Signup = () => {
       setError(err.response?.data?.message || "Signup failed");
     }
   };
+  
 
   return (
     <div className="p-6 max-w-md mx-auto bg-white rounded shadow">
