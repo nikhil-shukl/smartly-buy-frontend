@@ -18,6 +18,8 @@ import BlogsList from "./components/admin/BlogsList";
 import NewsList from "./components/admin/NewsList";
 import MessagesList from "./components/admin/MessagesList";
 import ComparePage from './pages/ComparePage';
+import AffiliateDisclosure from "./pages/AffiliateDisclosure";
+
 
 
 const App = () => {
@@ -37,6 +39,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/compare/:slug" element={<ComparePage />} />
+        <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
 
         {/* Admin Dashboard Routes */}
         <Route path="/admin" element={<Dashboard />}>
