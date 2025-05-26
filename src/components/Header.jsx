@@ -21,7 +21,7 @@ const Header = () => {
         <div className="flex items-center gap-8">
           <Link to="/phones" className="hover:text-blue-300">Phones</Link>
           <Link to="/earbuds" className="hover:text-blue-300">Earbuds</Link>
-          <Link to="/laptops-computers" className="hover:text-blue-300 flex items-center gap-1">Laptops & Computer</Link>
+          <Link to="/laptops" className="hover:text-blue-300 flex items-center gap-1">Laptops & Computer</Link>
           <Link to="/guides" className="hover:text-blue-300">Guides</Link>
           <Link to="/about" className="hover:text-blue-300">About Us</Link>
           <Link to="/contact" className="hover:text-blue-300">Contact Us</Link>

@@ -1,12 +1,12 @@
 import React from "react";
 
-const PhoneCard = ({ phone }) => {
+const LaptopCard = ({ laptop }) => {
   return (
     <div className="max-w-5xl mx-auto my-6 bg-white shadow-md rounded-xl overflow-hidden flex flex-col md:flex-row">
       {/* Image Section */}
       <img
-        src={phone.image}
-        alt={phone.name}
+        src={laptop.image}
+        alt={laptop.name}
         className="w-full md:w-1/3 h-56 md:h-auto object-cover"
       />
 
@@ -15,27 +15,27 @@ const PhoneCard = ({ phone }) => {
         <div>
           {/* Title */}
           <h2 className="text-lg md:text-xl font-semibold text-gray-800">
-            {phone.name}
+            {laptop.name}
           </h2>
 
           {/* Description */}
           <p className="text-gray-700 mt-2 text-sm md:text-base">
-            {phone.description}
+            {laptop.description}
           </p>
 
           {/* Best For */}
-          {phone.bestFor && (
+          {laptop.bestFor && (
             <p className="mt-2 text-sm text-green-600">
-              <strong>Best For:</strong> {phone.bestFor}
+              <strong>Best For:</strong> {laptop.bestFor}
             </p>
           )}
 
           {/* Pros */}
-          {phone.pros && phone.pros.length > 0 && (
+          {laptop.pros && laptop.pros.length > 0 && (
             <div className="mt-3">
               <p className="text-sm font-medium text-gray-800">Pros:</p>
               <ul className="list-disc list-inside text-sm text-gray-700">
-                {phone.pros.map((item, index) => (
+                {laptop.pros.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -43,11 +43,11 @@ const PhoneCard = ({ phone }) => {
           )}
 
           {/* Cons */}
-          {phone.cons && phone.cons.length > 0 && (
+          {laptop.cons && laptop.cons.length > 0 && (
             <div className="mt-3">
               <p className="text-sm font-medium text-gray-800">Cons:</p>
               <ul className="list-disc list-inside text-sm text-gray-700">
-                {phone.cons.map((item, index) => (
+                {laptop.cons.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -55,17 +55,17 @@ const PhoneCard = ({ phone }) => {
           )}
 
           {/* Verdict */}
-          {phone.verdict && (
+          {laptop.verdict && (
             <div className="mt-3">
               <p className="text-sm font-medium text-gray-800">Verdict:</p>
-              <p className="text-sm text-gray-700">{phone.verdict}</p>
+              <p className="text-sm text-gray-700">{laptop.verdict}</p>
             </div>
           )}
         </div>
 
         {/* Best Deal Button */}
         <a
-          href={phone.affiliateLink}
+          href={laptop.affiliateLink}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 self-start bg-blue-600 text-white px-3 py-1 text-sm font-medium rounded hover:bg-blue-700 transition duration-200"
@@ -77,4 +77,4 @@ const PhoneCard = ({ phone }) => {
   );
 };
 
-export default PhoneCard;
+export default LaptopCard;

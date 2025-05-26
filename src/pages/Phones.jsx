@@ -28,7 +28,7 @@ const Phones = () => {
   return (
     <div className="px-4 md:px-20 py-8">
       <BlogHeader
-        title="Top Phones in India (2025)"
+        title="Best Smartphones for Every Budget – Flagship to Value Picks"
         description="Explore our expert-picked list of the best smartphones across all price ranges. From flagship beasts to budget performers – find your next perfect phone here!"
       />
 
