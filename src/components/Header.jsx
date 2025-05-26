@@ -1,34 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CategoryList from './CategoryList';
+import { FiSearch } from 'react-icons/fi';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons'; // corrected import
 
 const Header = () => {
   return (
-    <header className="bg-blue-600 text-white px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between shadow-md space-y-4 md:space-y-0">
+    <header className="bg-[#0d183f] text-white px-6 py-4 shadow-md">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
 
-      {/* Left Section - Logo */}
-      <div className="flex items-center space-x-2">
-        <Link to="/" className="text-3xl font-bold hover:text-blue-300 transition duration-200">
-          Smartly Buy
-        </Link>
+        {/* Left - Icon Logo + Brand Name */}
+        <div className="flex items-center space-x-3">
+          <FontAwesomeIcon icon={faArrowTrendUp} className="text-white text-2xl" />
+          <Link to="/" className="text-3xl font-bold hover:text-blue-300 transition duration-200">
+            TechTrendyDeals
+          </Link>
+        </div>
+
+        {/* Right - Navigation + Search Icon */}
+        <div className="flex items-center gap-8">
+          <Link to="/phones" className="hover:text-blue-300">Phones</Link>
+          <Link to="/earbuds" className="hover:text-blue-300">Earbuds</Link>
+          <Link to="/laptops-computers" className="hover:text-blue-300 flex items-center gap-1">Laptops & Computer</Link>
+          <Link to="/guides" className="hover:text-blue-300">Guides</Link>
+          <Link to="/about" className="hover:text-blue-300">About Us</Link>
+          <Link to="/contact" className="hover:text-blue-300">Contact Us</Link>
+          <button className="hover:text-blue-300 transition duration-200 ml-2">
+            <FiSearch size={20} />
+          </button>
+        </div>
+
       </div>
-
-      {/* Middle Section - Search */}
-      <div className="w-full md:w-1/3">
-        <input 
-          type="text" 
-          placeholder="Search products..." 
-          className="w-full p-2 rounded border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-200"
-        />
-      </div>
-
-      {/* Right Section - Categories + Auth */}
-      <div className="flex items-center space-x-4">
-        <CategoryList />
-        <Link to="/login" className="hover:text-blue-300">Login</Link>
-        <Link to="/signup" className="hover:text-blue-300">Signup</Link>
-      </div>
-
     </header>
   );
 };

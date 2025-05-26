@@ -43,7 +43,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="text-center text-gray-500 text-sm mt-10">
-        © 2025 <span className="text-white font-semibold">Smartly Buy</span>. All rights reserved.
+        © 2025 <span className="text-white font-semibold">TechTrendyDeals</span>. All rights reserved.
       </div>
     </footer>
   );
