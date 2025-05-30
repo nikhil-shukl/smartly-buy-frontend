@@ -43,13 +43,14 @@ const AboutUs = () => {
           className="w-48 h-48 object-cover rounded-xl shadow-md"
         />
         <div className="text-center md:text-left">
-          <h3 className="text-2xl font-bold text-gray-900">Nikhil Shukla</h3>
-          <p className="text-gray-600 mt-2">
-            Founder & CEO – TechTrendyDeals.com <br />
-            IT Engineering Student, Thakur College of Engineering & Technology <br />
-            Full-Stack Developer (MERN)
-          </p>
+            <h3 className="text-2xl font-bold text-gray-900">Nikhil Shukla</h3>
+               <p className="text-gray-600 mt-2">
+                  Founder & CEO – TechTrendyDeals.com <br />
+                  Full-Stack Developer (MERN) <br />
+                  Passionate about helping users make smarter tech buying decisions.
+               </p>
         </div>
+
       </div>
 
       {/* Long Description */}
