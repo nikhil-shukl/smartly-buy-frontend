@@ -40,13 +40,22 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+    <div className="mt-10 p-6 max-w-md mx-auto bg-white rounded-lg shadow-lg">
+      {/* mt-10 added for gap from top */}
+      <h2 className="text-3xl font-extrabold mb-6 text-gray-900">Contact Us</h2>
 
-      {success && <p className="text-green-600">{success}</p>}
-      {error && <p className="text-red-600">{error}</p>}
+      {success && (
+        <p className="mb-4 text-green-700 bg-green-100 border border-green-300 rounded px-4 py-2">
+          {success}
+        </p>
+      )}
+      {error && (
+        <p className="mb-4 text-red-700 bg-red-100 border border-red-300 rounded px-4 py-2">
+          {error}
+        </p>
+      )}
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <input
           type="text"
           name="name"
@@ -54,8 +63,9 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="border p-2 rounded"
+          className="border border-gray-300 rounded-md p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0d183f] focus:border-transparent transition"
         />
+
         <input
           type="email"
           name="email"
@@ -63,18 +73,23 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="border p-2 rounded"
+          className="border border-gray-300 rounded-md p-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0d183f] focus:border-transparent transition"
         />
+
         <textarea
           name="message"
           placeholder="Your Message"
-          rows="4"
+          rows="5"
           value={formData.message}
           onChange={handleChange}
           required
-          className="border p-2 rounded"
+          className="border border-gray-300 rounded-md p-3 text-gray-900 resize-none focus:outline-none focus:ring-2 focus:ring-[#0d183f] focus:border-transparent transition"
         ></textarea>
-        <button type="submit" className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+
+        <button
+          type="submit"
+          className="bg-[#0d183f] text-white font-semibold py-3 rounded-md shadow-md hover:bg-[#0b142f] transition"
+        >
           Send Message
         </button>
       </form>
@@ -83,3 +98,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+

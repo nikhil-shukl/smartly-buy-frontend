@@ -7,7 +7,7 @@ const PhoneCard = ({ phone }) => {
       <img
         src={phone.image}
         alt={phone.name}
-        className="w-full md:w-1/3 h-56 md:h-auto object-cover"
+        className="w-full md:w-1/3 h-56 md:h-64 object-contain p-2"
       />
 
       {/* Content Section */}
