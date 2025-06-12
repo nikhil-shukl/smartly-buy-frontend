@@ -5,11 +5,12 @@ import { Helmet } from "react-helmet";
 const AffiliateDisclosure = () => {
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    axios.get("/disclosure/affiliate-disclosure")
-      .then((res) => setData(res.data))
-      .catch((err) => console.error("Error loading disclosure:", err));
-  }, []);
+ useEffect(() => {
+  axios.get("/disclosure/affiliate-disclosure")
+    .then((res) => setContent(res.data?.content))
+    .catch((err) => console.error("Error loading disclosure:", err));
+}, []);
+
 
   return (
     <div className="max-w-4xl mx-auto p-6 mt-12 bg-white shadow-lg rounded-lg border border-gray-200 text-gray-800">
