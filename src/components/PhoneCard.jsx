@@ -4,11 +4,14 @@ const PhoneCard = ({ phone }) => {
   return (
     <div className="max-w-5xl mx-auto my-6 bg-white shadow-md rounded-xl overflow-hidden flex flex-col md:flex-row">
       {/* Image Section */}
-      <img
+   <a href={phone.affiliateLink} target="_blank" rel="nofollow noopener noreferrer" className="w-full md:w-1/3">
+     <img
         src={phone.image}
         alt={phone.name}
-        className="w-full md:w-1/3 h-56 md:h-64 object-contain p-2"
-      />
+        className="w-full h-56 md:h-64 object-contain p-2"
+     />
+   </a>
+
 
       {/* Content Section */}
       <div className="p-4 md:w-2/3 flex flex-col justify-between">
