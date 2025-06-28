@@ -57,11 +57,14 @@ const ProductDetail = () => {
           </a>
         </div>
 
+       <a href={product.affiliateLink} target="_blank" rel="nofollow noopener noreferrer">
         <img
           src={product.imageUrl}
           alt={product.name}
-          className="w-full max-h-96 object-contain mb-8 rounded-lg shadow-md"
+          className="w-full max-h-96 object-contain mb-8 rounded-lg shadow-md hover:scale-105 transition duration-300"
         />
+      </a>
+
 
         {/* Description */}
         <section className="mb-8">
