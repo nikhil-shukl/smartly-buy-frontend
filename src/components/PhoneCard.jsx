@@ -19,6 +19,7 @@ const PhoneCard = ({ phone }) => {
 
       {/* Content Section */}
       <div className="p-4 md:w-2/3 flex flex-col justify-between">
+        {/* Top Content: Title, Description, Best For, Pros & Cons */}
         <div>
           {/* Title */}
           <h2 className="text-lg md:text-xl font-semibold text-gray-800">
@@ -65,28 +66,32 @@ const PhoneCard = ({ phone }) => {
               )}
             </div>
           )}
+        </div>
 
+        {/* Bottom Content: Verdict + Best Deal */}
+        <div className="mt-4">
           {/* Verdict */}
           {phone.verdict && (
-            <div className="mt-3">
+            <div className="mb-3">
               <p className="text-sm font-medium text-gray-800">Verdict:</p>
               <p className="text-sm text-gray-700">{phone.verdict}</p>
             </div>
           )}
-        </div>
 
-        {/* Best Deal Button */}
-    <a
-        href={phone.affiliateLink}
-         target="_blank"
-         rel="noopener noreferrer"
-        className="mt-4 self-start bg-blue-600 text-white px-5 py-2 text-base font-semibold rounded-lg hover:bg-blue-700 transition duration-200"
-       >
-          Best Deal
-    </a>
+          {/* Best Deal Button */}
+          <a
+            href={phone.affiliateLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white px-5 py-2 text-base font-semibold rounded-lg hover:bg-blue-700 transition duration-200"
+          >
+            Best Deal
+          </a>
+        </div>
       </div>
     </div>
   );
 };
 
 export default PhoneCard;
+
