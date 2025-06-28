@@ -1,9 +1,24 @@
 import React from 'react';
+import { Helmet } from 'react-helmet'; // ✅ Import Helmet
 import Guides from './Guides';
 
 const HeroicDetail = () => {
   return (
     <>
+      {/* ✅ SEO Tags */}
+      <Helmet>
+        <title>In-Depth Tech Guides & Buying Advice | TechTrendyDeals</title>
+        <meta
+          name="description"
+          content="Explore expert-reviewed buying guides and product reviews for smartphones, laptops, earbuds, and more. Make smart tech decisions with TechTrendyDeals."
+        />
+        <meta
+          name="keywords"
+          content="tech guides, smartphone reviews, laptop buying advice, earbuds comparison, best tech under budget"
+        />
+        <link rel="canonical" href="https://www.techtrendydeals.com/heroic-detail" />
+      </Helmet>
+
       <main className="max-w-4xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-1 text-center">
           Tech Trendy Deals – In-Depth Reviews & Expert Buying Guides
@@ -33,3 +48,4 @@ const HeroicDetail = () => {
 };
 
 export default HeroicDetail;
+

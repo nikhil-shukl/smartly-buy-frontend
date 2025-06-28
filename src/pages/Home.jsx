@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from '../utils/axios'; // use your configured Axios instance
+import { Helmet } from 'react-helmet'; // ✅ Helmet import
 
 const Home = () => {
   const [products, setProducts] = useState({ phones: [], laptops: [], earbuds: [] });
@@ -24,6 +25,20 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
+      {/* ✅ SEO Helmet */}
+      <Helmet>
+        <title>Tech Trendy Deals | Compare Best Smartphones, Laptops, and Earbuds</title>
+        <meta
+          name="description"
+          content="TechTrendyDeals.com helps you compare the latest smartphones, laptops, and earbuds with expert reviews, verdicts, and best affiliate deals — all in one place."
+        />
+        <meta
+          name="keywords"
+          content="best smartphones 2025, laptop deals, earbuds comparison, tech reviews, buy smart tech online"
+        />
+        <link rel="canonical" href="https://www.techtrendydeals.com/" />
+      </Helmet>
+
       <div className="w-[120px] hidden lg:block"></div>
 
       <div className="max-w-[1200px] w-full px-4">
@@ -88,8 +103,8 @@ const Section = ({ title, items, navigate }) => (
             onClick={() => navigate(`/product/${item.slug}`)}
             className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
           >
-            Best Deal
-          </button>
+            View Deal
+          </button> 
         </div>
       ))}
     </div>
