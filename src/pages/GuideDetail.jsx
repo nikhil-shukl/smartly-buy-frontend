@@ -60,7 +60,7 @@ const GuideDetail = () => {
             {guide.products.map((product, index) => (
               <div
                 key={index}
-                className="bg-white p-4 my-4 shadow-md rounded-md flex flex-col md:flex-row relative"
+                className="bg-white p-4 my-6 shadow-md rounded-md flex flex-col relative"
               >
                 {/* 🔝 Top-right Buy Now */}
                 {product.affiliateLink && (
@@ -76,17 +76,13 @@ const GuideDetail = () => {
                   </div>
                 )}
 
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full md:w-48 h-32 object-cover rounded"
-                />
-
-                <div className="md:ml-4 mt-3 md:mt-0">
+                {/* Product Info */}
+                <div>
                   <h2 className="text-xl font-semibold">
                     {product.rank}. {product.name}
                   </h2>
                   <p className="text-lg mt-2">{product.verdict}</p>
+
                   <ul className="text-green-700 list-disc list-inside mt-2">
                     {product.pros.map((pro, i) => (
                       <li key={i}>✔️ {pro}</li>
@@ -104,7 +100,7 @@ const GuideDetail = () => {
                       href={product.affiliateLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                      className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                     >
                       Best Deal on Amazon
                     </a>
@@ -114,6 +110,13 @@ const GuideDetail = () => {
                     </p>
                   )}
                 </div>
+
+                {/* 🖼️ Full-width Image (uncropped, like Amazon) */}
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full max-h-[400px] object-contain rounded mt-4 border"
+                />
 
                 {/* 📱 Sticky Buy Now for mobile */}
                 {product.affiliateLink && (
