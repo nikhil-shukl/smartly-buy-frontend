@@ -76,6 +76,13 @@ const GuideDetail = () => {
                   </div>
                 )}
 
+                 {/* 🖼️ Full-width Image (uncropped, like Amazon) */}
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full max-h-[400px] object-contain rounded mt-4 border"
+                />
+
                 {/* Product Info */}
                 <div>
                   <h2 className="text-xl font-semibold">
@@ -111,12 +118,6 @@ const GuideDetail = () => {
                   )}
                 </div>
 
-                {/* 🖼️ Full-width Image (uncropped, like Amazon) */}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full max-h-[400px] object-contain rounded mt-4 border"
-                />
 
                 {/* 📱 Sticky Buy Now for mobile */}
                 {product.affiliateLink && (
