@@ -77,11 +77,26 @@ const GuideDetail = () => {
                 )}
 
                  {/* 🖼️ Full-width Image (uncropped, like Amazon) */}
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full max-h-[400px] object-contain rounded mt-4 border"
-                />
+               {product.affiliateLink ? (
+      <a
+            href={product.affiliateLink}
+            target="_blank"
+            rel="noreferrer"
+         >
+       <img
+            src={product.image}
+            alt={product.name}
+            className="w-full max-h-[400px] object-contain rounded mt-4 border hover:scale-105 transition-transform duration-300"
+       />
+     </a>
+     ) : (
+     <img
+         src={product.image}
+         alt={product.name}
+         className="w-full max-h-[400px] object-contain rounded mt-4 border"
+     />
+    )}
+
 
                 {/* Product Info */}
                 <div>
