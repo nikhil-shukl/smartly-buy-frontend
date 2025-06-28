@@ -65,14 +65,15 @@ const PhoneCard = ({ phone }) => {
           </div>
 
           {/* Best Deal Button */}
-          <a
+         <a
             href={phone.affiliateLink}
-            target="_blank"
+             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block bg-blue-600 text-white px-5 py-2 text-base font-semibold rounded-lg hover:bg-blue-700 transition duration-200"
-          >
-            Best Deal
-          </a>
+            >
+             Best Deal
+         </a>
+
         </div>
       </div>
 
