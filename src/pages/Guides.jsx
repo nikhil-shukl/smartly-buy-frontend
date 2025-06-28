@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
 import GuideCard from "../components/GuideCard";
+import { Helmet } from "react-helmet";
 
 const Guides = () => {
   const [guides, setGuides] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,7 +15,7 @@ const Guides = () => {
       } catch (error) {
         console.error("Error fetching guides:", error);
       } finally {
-        setLoading(false); // Stop loading
+        setLoading(false);
       }
     };
     fetchData();
@@ -22,6 +23,20 @@ const Guides = () => {
 
   return (
     <div className="px-4 md:px-20 py-8 flex gap-4">
+      {/* ✅ SEO Meta Tags */}
+      <Helmet>
+        <title>Tech Buying Guides 2025 | Expert Picks & Comparisons</title>
+        <meta
+          name="description"
+          content="Explore expert buying guides for smartphones, laptops, earbuds, and more. Make informed decisions with our curated tech recommendations for 2025."
+        />
+        <meta
+          name="keywords"
+          content="tech buying guides, best smartphones 2025, top laptops, earbuds comparison, gadget recommendations, techtrendydeals guides"
+        />
+        <link rel="canonical" href="https://www.techtrendydeals.com/guides" />
+      </Helmet>
+
       {/* Left ad space */}
       <div className="hidden lg:block w-1/6">{/* Placeholder for ads */}</div>
 
