@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
 import EarbudCard from "../components/EarbudCard";
 import BlogHeader from "../components/BlogHeader";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet"; // ✅ Correct Helmet import
 
 const Earbuds = () => {
   const [earbuds, setEarbuds] = useState([]);
@@ -65,3 +65,4 @@ const Earbuds = () => {
 };
 
 export default Earbuds;
+

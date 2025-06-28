@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
 import LaptopCard from "../components/LaptopCard";
 import BlogHeader from "../components/BlogHeader";
-import { Helmet } from "react-helmet-async"; // SEO enhancement
+import { Helmet } from "react-helmet"; // ✅ Updated for SEO
 
 const Laptops = () => {
   const [laptops, setLaptops] = useState([]);
@@ -28,7 +28,7 @@ const Laptops = () => {
 
   return (
     <div className="px-4 md:px-20 py-8">
-      {/* ✅ SEO Meta Tags */}
+      {/* ✅ SEO Helmet Tags */}
       <Helmet>
         <title>Top Laptops & Computers for Work, Gaming, and Daily Use</title>
         <meta
