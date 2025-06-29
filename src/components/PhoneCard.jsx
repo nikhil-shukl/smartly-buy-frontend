@@ -3,36 +3,38 @@ import React from "react";
 const PhoneCard = ({ phone }) => {
   return (
     <div className="max-w-3xl w-full mx-auto my-6 bg-white shadow-md rounded-xl overflow-hidden">
-      {/* Container: Stacked on mobile, side-by-side on md+ */}
-      <div className="flex flex-col md:flex-row">
+      {/* 🔁 Always row layout, even on mobile */}
+      <div className="flex flex-row flex-wrap">
         {/* 📱 Image Section */}
         <a
           href={phone.affiliateLink}
           target="_blank"
           rel="nofollow noopener noreferrer"
-          className="w-full md:w-1/3 bg-gray-50"
+          className="w-1/3 bg-gray-50 min-w-[120px]"
         >
           <img
             src={phone.image}
             alt={phone.name}
-            className="w-full h-52 md:h-64 object-contain p-3"
+            className="w-full h-40 sm:h-52 md:h-64 object-contain p-3"
           />
         </a>
 
         {/* 📝 Content */}
-        <div className="p-4 md:w-2/3 flex flex-col justify-between">
+        <div className="p-4 w-2/3 flex flex-col justify-between">
           <div>
-            <h2 className="text-base md:text-xl font-semibold text-gray-800">{phone.name}</h2>
-            <p className="text-sm md:text-base text-gray-700 mt-2">{phone.description}</p>
+            <h2 className="text-base md:text-xl font-semibold text-gray-800">
+              {phone.name}
+            </h2>
+            <p className="text-sm md:text-base text-gray-700 mt-2">
+              {phone.description}
+            </p>
 
-            {/* Best For */}
             {phone.bestFor && (
               <p className="mt-2 text-sm text-green-600">
                 <strong>Best For:</strong> {phone.bestFor}
               </p>
             )}
 
-            {/* ✅ Pros & Cons */}
             {(phone.pros?.length > 0 || phone.cons?.length > 0) && (
               <div className="mt-4 flex flex-col md:flex-row gap-4">
                 {phone.pros?.length > 0 && (
@@ -59,7 +61,7 @@ const PhoneCard = ({ phone }) => {
             )}
           </div>
 
-          {/* 🛒 Best Deal CTA */}
+          {/* 🛒 Best Deal Button */}
           <a
             href={phone.affiliateLink}
             target="_blank"
@@ -83,4 +85,5 @@ const PhoneCard = ({ phone }) => {
 };
 
 export default PhoneCard;
+
 
