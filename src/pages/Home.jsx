@@ -88,7 +88,7 @@ const Home = () => {
 const Section = ({ title, items, navigate }) => (
   <section className="mt-10 mb-10">
     <h2 className="text-xl sm:text-2xl font-bold mb-4">{title}</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
       {items.map(item => (
         <div key={item._id} className="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
           <div className="flex justify-center items-center h-44 sm:h-48 bg-gray-100 rounded mb-3 overflow-hidden">
