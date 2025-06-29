@@ -12,8 +12,16 @@ const GuideCard = ({ guide }) => (
         />
       </div>
     </Link>
-    <h3 className="text-lg font-bold text-gray-800">{guide.title}</h3>
+
+    {/* 🔗 Title wrapped in Link */}
+    <Link to={`/guides/${guide.slug}`}>
+      <h3 className="text-lg font-bold text-gray-800 hover:text-blue-600 transition">
+        {guide.title}
+      </h3>
+    </Link>
+
     <p className="text-sm text-gray-600 mt-1">{guide.description}</p>
+
     <Link
       to={`/guides/${guide.slug}`}
       className="mt-3 inline-block text-blue-600 font-medium"
@@ -24,4 +32,5 @@ const GuideCard = ({ guide }) => (
 );
 
 export default GuideCard;
+
 

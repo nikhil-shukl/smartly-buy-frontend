@@ -9,18 +9,21 @@ const GuideDetail = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchGuide = async () => {
-      try {
-        const { data } = await axios.get(`/guides/${slug}`);
-        setGuide(data.guide);
-      } catch (err) {
-        setError("Guide not found or server error.");
-        console.error(err);
-      }
-    };
+  window.scrollTo(0, 0); // 🔝 Force scroll to top on slug change
 
-    fetchGuide();
-  }, [slug]);
+  const fetchGuide = async () => {
+    try {
+      const { data } = await axios.get(`/guides/${slug}`);
+      setGuide(data.guide);
+    } catch (err) {
+      setError("Guide not found or server error.");
+      console.error(err);
+    }
+  };
+
+  fetchGuide();
+}, [slug]);
+ 
 
   if (error) return <div className="text-red-500">{error}</div>;
   if (!guide) return <div>Loading...</div>;
