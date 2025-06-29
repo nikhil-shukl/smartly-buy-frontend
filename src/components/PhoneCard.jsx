@@ -3,24 +3,36 @@ import React from "react";
 const PhoneCard = ({ phone }) => {
   return (
     <div className="max-w-3xl w-full mx-auto my-6 bg-white shadow-md rounded-xl overflow-hidden">
-      {/* 🔁 Reverse on mobile using flex-col-reverse, normal on md+ */}
-      <div className="flex flex-col-reverse md:flex-row">
-        {/* 📝 Content Section (left on mobile, right on desktop) */}
-        <div className="p-4 w-full md:w-2/3 flex flex-col justify-between">
-          <div>
-            <h2 className="text-base md:text-xl font-semibold text-gray-800">
-              {phone.name}
-            </h2>
-            <p className="text-sm md:text-base text-gray-700 mt-2">
-              {phone.description}
-            </p>
+      {/* Container: Stacked on mobile, side-by-side on md+ */}
+      <div className="flex flex-col md:flex-row">
+        {/* 📱 Image Section */}
+        <a
+          href={phone.affiliateLink}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          className="w-full md:w-1/3 bg-gray-50"
+        >
+          <img
+            src={phone.image}
+            alt={phone.name}
+            className="w-full h-52 md:h-64 object-contain p-3"
+          />
+        </a>
 
+        {/* 📝 Content */}
+        <div className="p-4 md:w-2/3 flex flex-col justify-between">
+          <div>
+            <h2 className="text-base md:text-xl font-semibold text-gray-800">{phone.name}</h2>
+            <p className="text-sm md:text-base text-gray-700 mt-2">{phone.description}</p>
+
+            {/* Best For */}
             {phone.bestFor && (
               <p className="mt-2 text-sm text-green-600">
                 <strong>Best For:</strong> {phone.bestFor}
               </p>
             )}
 
+            {/* ✅ Pros & Cons */}
             {(phone.pros?.length > 0 || phone.cons?.length > 0) && (
               <div className="mt-4 flex flex-col md:flex-row gap-4">
                 {phone.pros?.length > 0 && (
@@ -47,7 +59,7 @@ const PhoneCard = ({ phone }) => {
             )}
           </div>
 
-          {/* 🛒 Best Deal Button */}
+          {/* 🛒 Best Deal CTA */}
           <a
             href={phone.affiliateLink}
             target="_blank"
@@ -57,29 +69,13 @@ const PhoneCard = ({ phone }) => {
             Best Deal
           </a>
         </div>
-
-        {/* 📱 Image Section (right on mobile, left on desktop) */}
-        <a
-          href={phone.affiliateLink}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-          className="w-full md:w-1/3 bg-gray-50"
-        >
-          <img
-            src={phone.image}
-            alt={phone.name}
-            className="w-full h-40 sm:h-52 md:h-64 object-contain p-3"
-          />
-        </a>
       </div>
 
       {/* ✅ Verdict Section */}
       {phone.verdict && (
         <div className="border-t border-gray-200 p-4">
           <p className="text-sm font-medium text-gray-800 mb-1">Verdict:</p>
-          <p className="text-sm text-gray-700 whitespace-pre-line">
-            {phone.verdict}
-          </p>
+          <p className="text-sm text-gray-700 whitespace-pre-line">{phone.verdict}</p>
         </div>
       )}
     </div>
@@ -87,5 +83,4 @@ const PhoneCard = ({ phone }) => {
 };
 
 export default PhoneCard;
-
 
