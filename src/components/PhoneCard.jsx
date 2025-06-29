@@ -83,7 +83,7 @@ const PhoneCard = ({ phone }) => {
           <p className="text-sm font-medium text-gray-800 mb-1">Verdict:</p>
           <p className="text-sm text-gray-700">{phone.verdict}</p>
         </div>
-      )}
+      )} 
     </div>
   );
 };
