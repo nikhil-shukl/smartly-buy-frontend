@@ -8,10 +8,12 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    axios.get(`/products/product/${slug}`)
-      .then(res => setProduct(res.data))
-      .catch(console.error);
-  }, [slug]);
+  window.scrollTo(0, 0); // 🔹 scroll to top on page load
+  axios.get(`/products/product/${slug}`)
+    .then(res => setProduct(res.data))
+    .catch(console.error);
+}, [slug]);
+
 
   if (!product) return <div className="text-center mt-20 text-lg font-medium">Loading...</div>;
 

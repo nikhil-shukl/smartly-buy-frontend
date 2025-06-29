@@ -53,7 +53,7 @@ const Guides = () => {
             <div className="w-10 h-10 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {guides.map((guide, index) => (
               <React.Fragment key={guide._id}>
                 <GuideCard guide={guide} />
