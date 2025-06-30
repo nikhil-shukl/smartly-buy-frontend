@@ -6,8 +6,15 @@
       "destination": "/index.html"
     }
   ],
-  "error": {
-    "statusCode": 404,
-    "source": "/404.html"
-  }
+  "headers": [
+    {
+      "source": "/404.html",
+      "headers": [
+        {
+          "key": "x-vercel-status",
+          "value": "404"
+        }
+      ]
+    }
+  ]
 }
