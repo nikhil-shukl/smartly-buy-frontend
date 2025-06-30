@@ -15,6 +15,8 @@ import ContactForm from './components/ContactForm';
 import AffiliateDisclosure from './pages/AffiliateDisclosure';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+import NotFound from './pages/NotFound';
+
 
 const App = () => {
   return (
@@ -38,6 +40,7 @@ const App = () => {
           <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
