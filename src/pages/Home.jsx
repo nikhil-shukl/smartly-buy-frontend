@@ -25,18 +25,20 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <Helmet>
-        <title>Tech Trendy Deals | Compare Best Smartphones, Laptops, and Earbuds</title>
-        <meta
-          name="description"
-          content="TechTrendyDeals.com helps you compare the latest smartphones, laptops, and earbuds with expert reviews, verdicts, and best affiliate deals — all in one place."
-        />
-        <meta
-          name="keywords"
-          content="best smartphones 2025, laptop deals, earbuds comparison, tech reviews, buy smart tech online"
-        />
-        <link rel="canonical" href="https://www.techtrendydeals.com/" />
-      </Helmet>
+     <Helmet>
+  <title>Tech Trendy Deals – Best Tech Reviews & Comparisons</title>
+     <meta
+       name="description"
+        content="TechTrendyDeals.com helps you compare the latest smartphones, laptops, and earbuds with expert reviews, verdicts, and best affiliate deals — all in one place."
+     />
+    <meta
+       name="keywords"
+       content="best smartphones 2025, laptop deals, earbuds comparison, tech reviews, buy smart tech online"
+    />
+     <link rel="canonical" href="https://www.techtrendydeals.com/" />
+</Helmet>
+
+
 
       <div className="w-[120px] hidden lg:block"></div>
 
