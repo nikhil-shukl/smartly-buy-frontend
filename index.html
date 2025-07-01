@@ -1,33 +1,67 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8" />
 
-    <!-- ✅ Google Search Console Verification -->
-    <meta name="google-site-verification" content="sptcA4Kvaeb4TMsZx2svxCq-dIDfaalzJsjh8VyACeE" />
+  <!-- ✅ Google Search Console Verification -->
+  <meta name="google-site-verification" content="sptcA4Kvaeb4TMsZx2svxCq-dIDfaalzJsjh8VyACeE" />
 
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Trendy Deals</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Trendy Deals</title>
 
-    <!-- ✅ Structured Data for SEO Rich Snippets -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Tech Trendy Deals",
-        "url": "https://www.techtrendydeals.com",
-        "logo": "https://www.techtrendydeals.com/logo.png",
-        "sameAs": [
-          "https://www.instagram.com/techtrendydeals.co",
-          "https://www.facebook.com/profile.php?id=61577628764728",
-          "https://www.linkedin.com/company/tech-trendy-deals"
-        ]
-      }
-    </script>
-  </head>
+  <!-- ✅ Open Graph Meta Tags -->
+  <meta property="og:title" content="Tech Trendy Deals - Best Affiliate Tech Reviews" />
+  <meta property="og:description" content="Founded by Nikhil Shukla, Tech Trendy Deals helps you find the best affiliate offers on trending phones, laptops, and gadgets." />
+  <meta property="og:image" content="https://www.techtrendydeals.com/nikhil-laptop.jpeg" />
+  <meta property="og:url" content="https://www.techtrendydeals.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- ✅ Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tech Trendy Deals by Nikhil Shukla" />
+  <meta name="twitter:description" content="Explore trending gadgets, smart comparisons, and the best affiliate deals curated by Nikhil Shukla." />
+  <meta name="twitter:image" content="https://www.techtrendydeals.com/nikhil-laptop.jpeg" />
+
+  <!-- ✅ Inline Minimal Critical CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+    }
+    header {
+      background: #ffffff;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+
+  <!-- ✅ Preload Main CSS Asynchronously -->
+  <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+
+  <!-- ✅ Structured Data for SEO Rich Snippets -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tech Trendy Deals",
+      "url": "https://www.techtrendydeals.com",
+      "logo": "https://www.techtrendydeals.com/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/techtrendydeals.co",
+        "https://www.facebook.com/profile.php?id=61577628764728",
+        "https://www.linkedin.com/company/tech-trendy-deals"
+      ]
+    }
+  </script>
+</head>
+
   <body>
     <div id="root"></div>
+
+    <!-- ✅ Defer Main JS (already done via type="module") -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
