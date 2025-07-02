@@ -25,18 +25,19 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-     <Helmet>
-  <title>Tech Trendy Deals – Best Tech Reviews & Comparisons</title>
-     <meta
-       name="description"
-        content="TechTrendyDeals.com helps you compare the latest smartphones, laptops, and earbuds with expert reviews, verdicts, and best affiliate deals — all in one place."
-     />
-    <meta
-       name="keywords"
-       content="best smartphones 2025, laptop deals, earbuds comparison, tech reviews, buy smart tech online"
-    />
-     <link rel="canonical" href="https://www.techtrendydeals.com/" />
+<Helmet>
+  <title>TechTrendyDeals – Compare Smartphones, Laptops & Earbuds</title>
+  <meta
+    name="description"
+    content="Compare the latest smartphones, laptops, and earbuds with expert reviews, side-by-side specs, and affiliate deals. TechTrendyDeals makes buying tech easy in 2025."
+  />
+  <meta
+    name="keywords"
+    content="smartphones 2025, laptop comparisons, earbuds reviews, tech deals, TechTrendyDeals"
+  />
+  <link rel="canonical" href="https://www.techtrendydeals.com/" />
 </Helmet>
+
 
 
 
@@ -52,9 +53,10 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-black opacity-60 rounded-lg"></div>
           <div className="relative z-10">
-            <h1 className="text-2xl sm:text-3xl font-bold mb-4 leading-snug">
-              Tech Trendy Deals – Your Smart Tech Buying Companion
-            </h1>
+      <h1 className="text-3xl sm:text-4xl font-bold mb-4 leading-snug">
+        Best Tech Product Reviews, Comparisons & Deals – 2025
+      </h1>
+
             <p className="text-base sm:text-lg mb-6 px-2 sm:px-0 leading-relaxed">
               Discover top-rated smartphones, laptops, and earbuds. Compare specs, read expert guides, and find the best deals before you buy.
             </p>
@@ -89,7 +91,10 @@ const Home = () => {
 
 const Section = ({ title, items, navigate }) => (
   <section className="mt-10 mb-10">
-    <h2 className="text-xl sm:text-2xl font-bold mb-4">{title}</h2>
+   <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+  Best {title} to Buy in 2025 – Reviews & Deals
+</h2>
+
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
       {items.map(item => (
         <div key={item._id} className="border rounded-lg p-4 shadow-sm hover:shadow-md transition">

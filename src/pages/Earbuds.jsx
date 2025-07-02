@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
 import EarbudCard from "../components/EarbudCard";
 import BlogHeader from "../components/BlogHeader";
-import { Helmet } from "react-helmet"; // ✅ Correct Helmet import
+import { Helmet } from "react-helmet";
 
 const Earbuds = () => {
   const [earbuds, setEarbuds] = useState([]);
@@ -28,7 +28,7 @@ const Earbuds = () => {
 
   return (
     <div className="px-4 md:px-20 py-8">
-      {/* ✅ SEO Meta Tags */}
+      {/* ✅ SEO Helmet Tags */}
       <Helmet>
         <title>Top Wireless Earbuds for Music, Calls & Fitness | TWS 2025</title>
         <meta
@@ -42,10 +42,17 @@ const Earbuds = () => {
         <link rel="canonical" href="https://www.techtrendydeals.com/earbuds" />
       </Helmet>
 
+      {/* ✅ H1 Tag for Page */}
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">
+        Best Wireless Earbuds in 2025 – TWS for Every Budget
+      </h1>
+
+      {/* ✅ BlogHeader already SEO-focused */}
       <BlogHeader
         title="Best Wireless Earbuds for Music, Calls & Workouts – Top TWS Picks"
         description="Explore the top-rated true wireless earbuds offering crystal-clear sound, long-lasting battery, and snug fit for all-day comfort. Whether it’s for Zoom calls, daily workouts, or immersive music, find the perfect pair of TWS earbuds right here."
       />
+     <h2 className="text-xl font-semibold text-gray-800 mb-4">Best Wireless Earbuds – Ranked & Reviewed</h2>
 
       {loading ? (
         <div className="flex justify-center items-center h-40">
@@ -54,15 +61,21 @@ const Earbuds = () => {
       ) : error ? (
         <div className="text-red-600 text-center mt-4">{error}</div>
       ) : (
-        <div className="flex flex-col gap-6 mt-6">
-          {earbuds.map((earbud) => (
-            <EarbudCard key={earbud._id} earbud={earbud} />
-          ))}
-        </div>
+        <>
+          {/* ✅ H2 Tag before product listing */}
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6 mt-10">
+            Compare Top Earbuds for Music, Workouts & Calls
+          </h2>
+
+          <div className="flex flex-col gap-6">
+            {earbuds.map((earbud) => (
+              <EarbudCard key={earbud._id} earbud={earbud} />
+            ))}
+          </div>
+        </>
       )}
     </div>
   );
 };
 
 export default Earbuds;
-

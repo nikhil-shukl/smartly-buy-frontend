@@ -7,17 +7,36 @@ const HeroicDetail = () => {
     <>
       {/* ✅ SEO Tags */}
   <Helmet>
-       <title>TechTrendyDeals – In-Depth Tech Guides & Advice</title>
-      <meta
-        name="description"
-        content="Explore expert buying guides and tech reviews for phones, laptops, and earbuds. Make smart gadget decisions with TechTrendyDeals."
-      />
-       <meta
-       name="keywords"
-       content="tech guides, smartphone reviews, laptop buying advice, earbuds comparison, best tech under budget"
-     />
-     <link rel="canonical" href="https://www.techtrendydeals.com/heroic-detail" />
-   </Helmet>
+  <title>TechTrendyDeals – In-Depth Tech Guides & Advice</title>
+  <meta
+    name="description"
+    content="Explore expert buying guides and tech reviews for phones, laptops, and earbuds. Make smart gadget decisions with TechTrendyDeals."
+  />
+  <meta
+    name="keywords"
+    content="tech guides, smartphone reviews, laptop buying advice, earbuds comparison, best tech under budget"
+  />
+  <link rel="canonical" href="https://www.techtrendydeals.com/heroic-detail" />
+
+  {/* ✅ JSON-LD Structured Data */}
+  <script type="application/ld+json">
+    {`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "TechTrendyDeals – In-Depth Tech Guides & Advice",
+      "description": "Explore expert buying guides and tech reviews for phones, laptops, and earbuds. Make smart gadget decisions with TechTrendyDeals.",
+      "url": "https://www.techtrendydeals.com/heroic-detail",
+      "publisher": {
+        "@type": "Organization",
+        "name": "TechTrendyDeals",
+        "url": "https://www.techtrendydeals.com/"
+      }
+    }
+    `}
+  </script>
+</Helmet>
+
 
 
       <main className="max-w-4xl mx-auto px-6 py-16">
