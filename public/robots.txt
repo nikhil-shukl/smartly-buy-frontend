@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /backend/
+Disallow: /server/
+Disallow: /node_modules/
+Allow: /
+
+Sitemap: https://www.techtrendydeals.com/sitemap.xml
