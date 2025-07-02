@@ -7,19 +7,23 @@ const AboutUs = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchAboutUsData = async () => {
-      try {
-        const response = await axios.get('/about');
-        setAboutData(response.data);
-      } catch (err) {
-        setError('Error fetching data');
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchAboutUsData();
-  }, []);
+useEffect(() => {
+  window.scrollTo(0, 0); // ✅ scroll to top when About page loads
+
+  const fetchAboutUsData = async () => {
+    try {
+      const response = await axios.get('/about');
+      setAboutData(response.data);
+    } catch (err) {
+      setError('Error fetching data');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchAboutUsData();
+}, []);
+
 
   if (loading) return <div className="text-center py-16 text-2xl font-medium animate-pulse">Loading...</div>;
   if (error) return <div className="text-center py-16 text-red-600 text-lg">{error}</div>;

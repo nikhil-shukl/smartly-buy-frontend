@@ -91,38 +91,27 @@ const Section = ({ title, items, navigate }) => (
   <section className="mt-10 mb-10">
     <h2 className="text-xl sm:text-2xl font-bold mb-4">{title}</h2>
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-      {items.map(item => {
-        // Try to create a small version from Amazon URL
-        let smallImage = item.imageUrl;
-        if (item.imageUrl.includes('_SL') && item.imageUrl.includes('.jpg')) {
-          smallImage = item.imageUrl.replace(/_SL\d+/, '_SL400');
-        }
-
-        return (
-          <div key={item._id} className="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-            <div className="flex justify-center items-center h-44 sm:h-48 bg-gray-100 rounded mb-3 overflow-hidden">
-              <img
-                srcSet={`${smallImage} 400w, ${item.imageUrl} 800w`}
-                sizes="(max-width: 640px) 100vw, 400px"
-                src={item.imageUrl}
-                alt={item.name}
-                className="max-h-full max-w-full object-contain"
-              />
-            </div>
-            <h3 className="text-black text-base sm:text-lg font-semibold">{item.name}</h3>
-            <p className="text-gray-700 text-sm mb-3">{item.description}</p>
-            <button
-              onClick={() => navigate(`/product/${item.slug}`)}
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded w-full sm:w-auto"
-            >
-              View Deal
-            </button>
+      {items.map(item => (
+        <div key={item._id} className="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
+          <div className="flex justify-center items-center h-44 sm:h-48 bg-gray-100 rounded mb-3 overflow-hidden">
+            <img
+              src={item.imageUrl}
+              alt={item.name}
+              className="max-h-full max-w-full object-contain"
+            />
           </div>
-        );
-      })}
+          <h3 className="text-black text-base sm:text-lg font-semibold">{item.name}</h3>
+          <p className="text-gray-700 text-sm mb-3">{item.description}</p>
+          <button
+            onClick={() => navigate(`/product/${item.slug}`)}
+            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded w-full sm:w-auto"
+          >
+            View Deal
+          </button>
+        </div>
+      ))}
     </div>
   </section>
 );
-
 
 export default Home;
