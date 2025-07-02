@@ -1,5 +1,29 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "techtrendydeals.com"
+        }
+      ],
+      "destination": "https://www.techtrendydeals.com",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "techtrendydeals.com"
+        }
+      ],
+      "destination": "https://www.techtrendydeals.com/:1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!404).*)",
