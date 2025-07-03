@@ -17,7 +17,7 @@
 
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!api|_next|static|favicon\\.ico|robots\\.txt|sitemap\\.xml|.*\\.(png|jpg|jpeg|svg|css|js)).*)",
       "destination": "/index.html"
     }
   ],
@@ -29,15 +29,6 @@
         {
           "key": "x-vercel-status",
           "value": "404"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Link",
-          "value": "<https://www.techtrendydeals.com>; rel=\"canonical\""
         }
       ]
     }
