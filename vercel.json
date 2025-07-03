@@ -1,5 +1,6 @@
 {
   "cleanUrls": true,
+
   "redirects": [
     {
       "source": "/:path*",
@@ -13,12 +14,14 @@
       "permanent": true
     }
   ],
+
   "rewrites": [
     {
-      "source": "/((?!404).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
+
   "headers": [
     {
       "source": "/404.html",
@@ -26,6 +29,15 @@
         {
           "key": "x-vercel-status",
           "value": "404"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "<https://www.techtrendydeals.com>; rel=\"canonical\""
         }
       ]
     }
