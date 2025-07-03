@@ -23,11 +23,12 @@ const Footer = () => {
         {/* Company Links */}
         <div>
           <h4 className="text-lg font-semibold text-white mb-5">Company</h4>
-          <ul className="space-y-3">
-            <li><Link to="/about" className="hover:text-white transition">About Us</Link></li>
-            <li><Link to="/contact" className="hover:text-white transition">Contact Us</Link></li>
-            <li><Link to="/careers" className="hover:text-white transition">Careers</Link></li>
-          </ul>
+<ul className="space-y-3">
+  <li><Link to="/about" className="hover:text-white transition">About Us</Link></li>
+  <li><Link to="/contact" className="hover:text-white transition">Contact Us</Link></li>
+  {/* <li><Link to="/careers" className="hover:text-white transition">Careers</Link></li> */}
+</ul>
+
         </div>
 
         {/* Support Links */}
@@ -46,7 +47,7 @@ const Footer = () => {
           <div className="flex space-x-6 text-lg mb-4">
             <a href="https://facebook.com/techtrendydeals" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
             <a href="https://twitter.com/techtrendydeals" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
-            <a href="https://linkedin.com/company/techtrendydeals" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            <a href="https://www.linkedin.com/company/107777432/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
             <a href="https://instagram.com/techtrendydeals" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
           </div>
 
