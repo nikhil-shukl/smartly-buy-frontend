@@ -2,14 +2,14 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "techtrendydeals.com"
         }
       ],
-      "destination": "https://www.techtrendydeals.com/",
+      "destination": "https://www.techtrendydeals.com/:path*",
       "permanent": true
     }
   ],
