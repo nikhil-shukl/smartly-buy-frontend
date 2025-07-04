@@ -1,9 +1,33 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "techtrendydeals.com"
+        }
+      ],
+      "destination": "https://www.techtrendydeals.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!api|_next|.*\\..*).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/404.html",
+      "headers": [
+        {
+          "key": "x-vercel-status",
+          "value": "404"
+        }
+      ]
     }
   ]
 }
