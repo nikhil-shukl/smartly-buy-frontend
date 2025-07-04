@@ -39,7 +39,7 @@ const Phones = () => {
           name="keywords" 
           content="best smartphones 2025, top phones, flagship mobiles, budget android, iPhones deals, mobile reviews, phone comparison" 
         />
-        <link rel="canonical" href="https://www.techtrendydeals.com/phones" />
+        <link rel="canonical" href="https://www.techtrendydeals.com/phones"/>
       </Helmet>
 
       {/* ✅ H1 tag for SEO */}

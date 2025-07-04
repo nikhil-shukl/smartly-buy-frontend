@@ -39,7 +39,7 @@ const Earbuds = () => {
           name="keywords"
           content="best wireless earbuds 2025, TWS earbuds, earbuds for gym, earbuds for calls, earbuds with long battery life, affordable TWS"
         />
-        <link rel="canonical" href="https://www.techtrendydeals.com/earbuds" />
+        <link rel="canonical" href="https://www.techtrendydeals.com/earbuds"/>
       </Helmet>
 
       {/* ✅ H1 Tag for Page */}

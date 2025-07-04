@@ -16,7 +16,7 @@ const HeroicDetail = () => {
     name="keywords"
     content="tech guides, smartphone reviews, laptop buying advice, earbuds comparison, best tech under budget"
   />
-  <link rel="canonical" href="https://www.techtrendydeals.com/heroic-detail" />
+  <link rel="canonical" href="https://www.techtrendydeals.com/heroic-detail"/>
 
   {/* ✅ JSON-LD Structured Data */}
   <script type="application/ld+json">

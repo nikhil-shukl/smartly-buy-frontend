@@ -34,7 +34,7 @@ const Guides = () => {
           name="keywords"
           content="tech buying guides, best smartphones 2025, top laptops, earbuds comparison, gadget recommendations, techtrendydeals guides"
         />
-        <link rel="canonical" href="https://www.techtrendydeals.com/guides" />
+        <link rel="canonical" href="https://www.techtrendydeals.com/guides"/>
       </Helmet>
 
       {/* Left ad space */}

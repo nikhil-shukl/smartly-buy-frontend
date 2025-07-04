@@ -25,7 +25,7 @@ const AffiliateDisclosure = () => {
           content="Read TechTrendyDeals' affiliate disclosure to understand how affiliate links work and how they help support our content at no extra cost to you."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.techtrendydeals.com/affiliate-disclosure" />
+        <link rel="canonical" href="https://www.techtrendydeals.com/affiliate-disclosure"/>
         {/* ✅ Optional: Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({

@@ -33,7 +33,7 @@ const AboutUs = () => {
       <Helmet>
         <title>{aboutData.meta_title || "About Us | TechTrendyDeals"}</title>
         <meta name="description" content={aboutData.meta_description || "Learn more about TechTrendyDeals and our mission to help users make smart tech buying decisions."} />
-        <link rel="canonical" href="https://www.techtrendydeals.com/about" />
+        <link rel="canonical" href="https://www.techtrendydeals.com/about"/>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

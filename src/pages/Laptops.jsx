@@ -39,7 +39,7 @@ const Laptops = () => {
           name="keywords"
           content="best laptops 2025, computers for work, gaming laptops, student laptops, creators laptops, desktop PCs"
         />
-        <link rel="canonical" href="https://www.techtrendydeals.com/laptops" />
+        <link rel="canonical" href="https://www.techtrendydeals.com/laptops"/>
       </Helmet>
 
       {/* ✅ H1 Tag */}
