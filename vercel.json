@@ -2,19 +2,8 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/((?!api|_next|404|favicon\\.ico|robots\\.txt|sitemap\\.xml|.*\\..*).*)",
+      "source": "/((?!api|_next|.*\\..*).*)",
       "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/404.html",
-      "headers": [
-        {
-          "key": "x-vercel-status",
-          "value": "404"
-        }
-      ]
     }
   ]
 }
