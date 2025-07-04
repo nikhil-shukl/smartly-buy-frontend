@@ -4,6 +4,11 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // ✅ This ensures correct routing paths in production
+  base: '/',
+  build: {
+    outDir: 'dist', // default is fine
+    rollupOptions: {
+      input: '/index.html',
+    }
+  }
 });
-

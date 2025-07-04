@@ -18,16 +18,5 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "headers": [
-    {
-      "source": "/404.html",
-      "headers": [
-        {
-          "key": "x-vercel-status",
-          "value": "404"
-        }
-      ]
-    }
   ]
 }
