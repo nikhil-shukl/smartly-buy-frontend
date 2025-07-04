@@ -17,7 +17,7 @@
 
   "rewrites": [
     {
-      "source": "/:path*",
+      "source": "/((?!api|_next|404|favicon.ico|robots.txt|sitemap.xml|.*\\..*).*)",
       "destination": "/index.html"
     }
   ],
