@@ -79,9 +79,16 @@ const AboutUs = () => {
       {aboutData.long_description && (
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-3">Who We Are</h2>
-          <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-            {aboutData.long_description}
-          </p>
+<div
+  className="text-gray-700 leading-relaxed whitespace-pre-line"
+  dangerouslySetInnerHTML={{
+    __html: aboutData.long_description.replace(
+      /NIKKI SHUKLA/g,
+      '<strong class="text-blue-700 font-semibold">NIKKI SHUKLA</strong>'
+    ),
+  }}
+/>
+
         </section>
       )}
 
