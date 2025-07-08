@@ -8,20 +8,30 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchHomeProducts = async () => {
-      try {
-        const res = await axios.get("/products/home-products");
-        setProducts(res.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching home products:", error);
+useEffect(() => {
+  let retryCount = 0;
+
+  const fetchHomeProducts = async () => {
+    try {
+      const res = await axios.get("/products/home-products");
+      setProducts(res.data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching home products:", error);
+
+      if (retryCount < 3) {
+        retryCount++;
+        console.log(`🔁 Retrying fetch... Attempt ${retryCount}`);
+        setTimeout(fetchHomeProducts, 3000); // retry after 3 seconds
+      } else {
         setLoading(false);
       }
-    };
+    }
+  };
 
-    fetchHomeProducts();
-  }, []);
+  fetchHomeProducts();
+}, []);
+
 
   return (
     <div className="flex justify-center">
@@ -69,19 +79,24 @@ const Home = () => {
           </div>
         </section>
 
-        {loading ? (
-          <div className="flex justify-center items-center h-60">
-            <div className="w-12 h-12 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        ) : (
-          <>
-            <Section title="Phones" items={products.phones} navigate={navigate} />
-            <hr className="my-10 border-t-4 rounded" style={{ borderColor: '#090E21' }} />
-            <Section title="Laptops" items={products.laptops} navigate={navigate} />
-            <hr className="my-10 border-t-4 rounded" style={{ borderColor: '#090E21' }} />
-            <Section title="Earbuds" items={products.earbuds} navigate={navigate} />
-          </>
-        )}
+{loading ? (
+  <div className="flex justify-center items-center h-60">
+    <div className="w-12 h-12 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+) : products.phones.length === 0 && products.laptops.length === 0 && products.earbuds.length === 0 ? (
+  <div className="text-center py-20">
+    <p className="text-red-600 text-lg">⚠️ Server is waking up or temporarily busy. Please wait a moment and refresh.</p>
+  </div>
+) : (
+  <>
+    <Section title="Phones" items={products.phones} navigate={navigate} />
+    <hr className="my-10 border-t-4 rounded" style={{ borderColor: '#090E21' }} />
+    <Section title="Laptops" items={products.laptops} navigate={navigate} />
+    <hr className="my-10 border-t-4 rounded" style={{ borderColor: '#090E21' }} />
+    <Section title="Earbuds" items={products.earbuds} navigate={navigate} />
+  </>
+)}
+
       </div>
 
       <div className="w-[120px] hidden lg:block"></div>

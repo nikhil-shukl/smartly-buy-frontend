@@ -62,10 +62,20 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="text-center text-gray-400 text-sm mt-12">
-        © 2025 <span className="text-white font-semibold">TechTrendyDeals</span>. All rights reserved.
-      </div>
+  
+{/* Copyright + Beta Notice */}
+<div className="text-center text-gray-400 text-sm mt-12 space-y-2">
+
+  {/* 🧪 Beta Notice */}
+  <p className="text-yellow-400 italic">
+    🛠 This site is currently in beta. Pages may take a few seconds to load while we optimize performance.
+  </p>
+
+  <p>
+    © 2025 <span className="text-white font-semibold">TechTrendyDeals</span>. All rights reserved.
+  </p>
+</div>
+
     </footer>
   );
 };
