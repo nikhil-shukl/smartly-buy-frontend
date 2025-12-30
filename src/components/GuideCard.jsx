@@ -32,5 +32,3 @@ const GuideCard = ({ guide }) => (
 );
 
 export default GuideCard;
-
-
