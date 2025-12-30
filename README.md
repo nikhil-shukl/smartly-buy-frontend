@@ -1,12 +1,66 @@
-# React + Vite
+# 🛒 Smartly Buy – Full Stack Affiliate Blog Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Smartly Buy is a modern **full-stack blog-based affiliate marketing platform** designed to publish high-quality product content and drive conversions through **Amazon Affiliate marketing**.  
+The project focuses heavily on **performance, SEO, and clean UI/UX**.
 
-Currently, two official plugins are available:
+🌐 Live domain: https://techtrendydeals.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend (Public Repository)
+- ⚛️ React.js (Vite)
+- 🎨 Tailwind CSS
+- 🌍 SEO optimization (meta tags, structured content)
+- ⚡ Fast SPA routing with Vercel deployment
+
+### Backend (Private)
+- 🟢 Node.js
+- 🚂 Express.js
+- 🔐 Secure APIs & environment-based configuration
+- 📦 Handles blog content, affiliate logic, and server-side operations
+
+---
+
+## 🔐 Repository Structure
+
+- **Frontend** → Public (this repository)
+- **Backend Server** → Private (for security & business logic)
+- **Environment variables & secrets** are never exposed
+
+---
+
+## 💡 Key Features
+
+- 📝 Blog-style product content
+- 🔗 Amazon Affiliate integration
+- 📈 SEO-focused architecture for better Google ranking
+- 📱 Fully responsive design
+- ⚡ Optimized performance & clean code structure
+- 🔒 Secure backend with private APIs
+
+---
+
+## 🌍 SEO & Performance
+
+- Optimized meta titles & descriptions  
+- Clean URL structure  
+- Mobile-first responsive design  
+- Fast loading with Vite + React  
+- Search-engine friendly content layout  
+
+---
+
+## 📌 Deployment
+
+- **Frontend** deployed on **Vercel**
+- **Backend** deployed privately
+- Connected with custom domain: **techtrendydeals.com**
+
+---
+
+## ⚠️ Note
+
+This repository contains **only the frontend code**.  
+The backend is intentionally kept private for security and business reasons.
